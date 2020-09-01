@@ -1,0 +1,26 @@
+import java.util.*;
+// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner input = new Scanner(System.in);
+        int a= input.nextInt();
+        long  sum=0;
+        long  count=0;
+        int []arr= new int[a];
+        for (int i=0;i<a;i++)
+        {
+            arr[i]= input.nextInt();
+            if(arr[i]>=0)
+            {
+                sum=sum+arr[i];
+                ++count;
+            }
+        }
+        if (sum==0 && count==0)
+        {
+            Arrays.sort(arr);
+            System.out.print(arr[a-1]+" "+"1");
+        }
+        else
+        System.out.print(sum+" "+count);
